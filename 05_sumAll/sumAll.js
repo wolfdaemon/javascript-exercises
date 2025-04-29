@@ -1,7 +1,13 @@
 const sumAll = function(x,y) {
 	let z = 0;
 
-	if (x < y) {
+	if (x < 0 || y < 0) { 
+		return "ERROR";
+	} else if (!Number.isInteger(x) || !Number.isInteger(y)) { // if numbers non-integer 
+		return "ERROR";
+	} else if (!typeof x === "number" || !typeof y === "number") {
+		return "ERROR";
+	} else if (x < y) {
 		for (i = x; i <= y; i++) {
 			z += i;
 		}
@@ -11,11 +17,10 @@ const sumAll = function(x,y) {
 			z += i;
 		}
 		return z;
-	} else if (x < 0 || y < 0) { // if numbers negative
-		console.log("ERROR: Negative numbers");
-	} else if ( ) // if numbers non-integer {
-
+	} else {
+		return "ERROR";
 	}
+
 };
 
 // Do not edit below this line
