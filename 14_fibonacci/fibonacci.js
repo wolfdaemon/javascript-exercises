@@ -15,8 +15,6 @@ const fibonacci = function(n) {
 		let n2 = seq[i - 2];
 		let nNext = n1 + n2;
 		seq.push(nNext);
-		console.log(seq + " <- seq");
-		console.log(nNext + " <- nNext");
 	}
 
 	let nPlace = n;
